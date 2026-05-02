@@ -165,18 +165,6 @@ export default async function ProductPage({
               {fmtPrice(p.price, p.currency)}
             </div>
           </div>
-          <div
-            style={{
-              fontFamily: "var(--sn-mono)",
-              fontSize: 11,
-              color: "var(--sn-ink-2)",
-              marginTop: 4,
-              letterSpacing: "0.05em",
-            }}
-          >
-            o 6 cuotas de {fmtPrice(Math.round(p.price / 6), p.currency)} sin recargo
-          </div>
-
           <ProductActions product={p} />
 
           <div

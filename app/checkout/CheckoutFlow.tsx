@@ -298,7 +298,7 @@ export function CheckoutFlow() {
                   {
                     id: "mp",
                     t: "Mercado Pago",
-                    d: "Tarjeta de crédito o débito · hasta 6 cuotas sin recargo",
+                    d: "Tarjeta de crédito o débito",
                     b: "MP",
                   },
                   {
@@ -387,7 +387,6 @@ export function CheckoutFlow() {
                   >
                     <Field label="Vencimiento" placeholder="MM / AA" />
                     <Field label="CVV" placeholder="•••" />
-                    <Field label="Cuotas" placeholder="6 cuotas" />
                   </div>
                 </div>
               )}

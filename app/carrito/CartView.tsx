@@ -307,12 +307,7 @@ export function CartView() {
                   {fmtPrice(total, currency)}
                 </span>
               </div>
-              <div
-                className="sn-mono"
-                style={{ fontSize: 11, opacity: 0.7, marginBottom: 24 }}
-              >
-                o 6 cuotas de {fmtPrice(Math.round(total / 6), currency)} sin recargo
-              </div>
+              <div style={{ marginBottom: 24 }} />
 
               <Link
                 href="/checkout"
