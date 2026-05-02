@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
 import { JsonLd } from "@/components/JsonLd";
+import { HeroBackground } from "@/components/HeroBackground";
 import { getCategories, getProducts, categoryImage } from "@/lib/products";
 import { localBusinessJsonLd } from "@/lib/seo";
 
@@ -39,14 +40,7 @@ export default async function Home() {
       <section
         style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}
       >
-        <Image
-          src="/assets/hero-mano-punta.webp"
-          alt="La Mano de Punta del Este"
-          fill
-          priority
-          sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "center 35%" }}
-        />
+        <HeroBackground />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
         <div
           style={{
