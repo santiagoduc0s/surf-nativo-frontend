@@ -48,8 +48,7 @@ export function Footer() {
               maxWidth: 280,
             }}
           >
-            Tienda de surf con base en Punta del Este, Maldonado. Trabajamos con
-            shapers locales y las mejores marcas internacionales desde 2008.
+            Tienda de surf con base en Punta del Este, Maldonado.
           </p>
         </div>
         {FOOTER_COLS.map((col) => (

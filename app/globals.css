@@ -218,7 +218,6 @@ input, select, textarea {
 .sn-row-cat-head { grid-template-columns: 1.4fr 1fr; }
 .sn-row-footer  { grid-template-columns: 1.5fr 1fr 1fr 1fr; }
 
-.sn-hide-mobile { display: initial; }
 .sn-show-mobile { display: none; }
 
 /* tablet */
@@ -249,7 +248,8 @@ input, select, textarea {
   .sn-row-footer { grid-template-columns: 1fr; gap: 24px; }
 
   .sn-hide-mobile { display: none !important; }
-  .sn-show-mobile { display: initial !important; }
+  .sn-show-mobile { display: flex !important; }
+  .sn-header-grid { grid-template-columns: 1fr auto !important; }
 }
 
 /* very small phones */
@@ -288,37 +288,40 @@ input, select, textarea {
 /* Mobile menu (hamburger drawer) */
 .sn-mobile-toggle {
   display: none;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   align-items: center;
   justify-content: center;
-  border: 1px solid currentColor;
+  border: none;
   background: transparent;
   cursor: pointer;
   flex-shrink: 0;
+  padding: 0;
 }
 .sn-mobile-toggle span,
 .sn-mobile-toggle span::before,
 .sn-mobile-toggle span::after {
   display: block;
-  width: 16px;
-  height: 1.5px;
+  width: 22px;
+  height: 2px;
   background: currentColor;
   position: relative;
+  border-radius: 1px;
+  transition: transform 0.2s, top 0.2s;
 }
 .sn-mobile-toggle span::before {
   content: "";
   position: absolute;
-  top: -5px;
+  top: -7px;
   left: 0;
-  width: 16px;
+  width: 22px;
 }
 .sn-mobile-toggle span::after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: 0;
-  width: 16px;
+  width: 22px;
 }
 
 .sn-drawer {
@@ -327,11 +330,28 @@ input, select, textarea {
   background: var(--sn-bone);
   color: var(--sn-ink);
   z-index: 999;
-  padding: 24px 24px 40px;
+  padding: 20px 24px 40px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   overflow-y: auto;
+}
+.sn-drawer-close {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--sn-ink);
+  cursor: pointer;
+  padding: 0;
+  margin-right: -8px; /* visually align with body content edge */
+}
+.sn-drawer-close svg {
+  width: 22px;
+  height: 22px;
 }
 .sn-drawer-link {
   display: flex;
