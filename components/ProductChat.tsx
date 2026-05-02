@@ -73,10 +73,8 @@ export function ProductChat() {
     const text = (raw ?? input).trim();
     if (!text || loading) return;
     setError(null);
-    const next: ChatMessage[] = [
-      ...history,
-      { role: "user", content: text },
-    ].slice(-MAX_HISTORY);
+    const userMsg: ChatMessage = { role: "user", content: text };
+    const next: ChatMessage[] = [...history, userMsg].slice(-MAX_HISTORY);
     setHistory(next);
     setInput("");
     setLoading(true);
