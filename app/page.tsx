@@ -38,7 +38,13 @@ export default async function Home() {
       <JsonLd data={localBusinessJsonLd()} />
       {/* HERO */}
       <section
-        style={{ position: "relative", height: "100vh", minHeight: 600, overflow: "hidden" }}
+        style={{
+          position: "relative",
+          height: "100svh",
+          minHeight: 560,
+          maxHeight: 1000,
+          overflow: "hidden",
+        }}
       >
         <HeroBackground />
         <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.35)" }} />
