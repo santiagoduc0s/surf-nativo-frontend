@@ -6,7 +6,7 @@ const FOOTER_COLS: Array<{ t: string; l: Array<{ label: string; href: string }> 
     t: "Tienda",
     l: [
       { label: "Tablas", href: "/categoria/surfboards" },
-      { label: "Wetsuits", href: "/categoria/wetsuits" },
+      { label: "Trajes", href: "/categoria/wetsuits" },
       { label: "Bodyboards", href: "/categoria/bodyboards" },
       { label: "Aletas", href: "/categoria/fins" },
     ],

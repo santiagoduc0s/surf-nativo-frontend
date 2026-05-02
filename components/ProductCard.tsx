@@ -17,7 +17,7 @@ export function ProductCard({
         <div style={{ position: "relative", background: "var(--sn-bone-2)" }}>
           <ProductImg src={product.image} alt={product.title} ratio="1/1" />
         </div>
-        <div style={{ paddingTop: 14 }}>
+        <div style={{ padding: "14px 14px 16px" }}>
           <div
             className="sn-mono"
             style={{

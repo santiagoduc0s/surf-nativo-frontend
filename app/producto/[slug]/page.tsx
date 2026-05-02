@@ -173,7 +173,7 @@ export default async function ProductPage({
               padding: 18,
               background: "var(--sn-bone-2)",
               display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
+              gridTemplateColumns: "repeat(2, 1fr)",
               gap: 16,
               fontSize: 12,
               lineHeight: 1.5,
@@ -204,19 +204,6 @@ export default async function ProductPage({
                 Cambios
               </div>
               <div style={{ color: "var(--sn-ink-2)" }}>Sin cargo, 30 días</div>
-            </div>
-            <div>
-              <div
-                style={{
-                  fontFamily: "var(--sn-serif)",
-                  fontSize: 15,
-                  fontWeight: 500,
-                  marginBottom: 4,
-                }}
-              >
-                Taller propio
-              </div>
-              <div style={{ color: "var(--sn-ink-2)" }}>Reparaciones in situ</div>
             </div>
           </div>
         </div>

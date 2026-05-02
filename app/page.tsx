@@ -6,7 +6,12 @@ import { Footer } from "@/components/Footer";
 import { ProductCard } from "@/components/ProductCard";
 import { JsonLd } from "@/components/JsonLd";
 import { HeroBackground } from "@/components/HeroBackground";
-import { getCategories, getProducts, categoryImage } from "@/lib/products";
+import {
+  getCategories,
+  getProducts,
+  categoryImage,
+  shortCategoryName,
+} from "@/lib/products";
 import { localBusinessJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -142,7 +147,7 @@ export default async function Home() {
               opacity: 0.96,
             }}
           >
-            Tablas, wetsuits, bodyboards y accesorios de las mejores marcas. Desde nuestro
+            Tablas, trajes, bodyboards y accesorios de las mejores marcas. Desde nuestro
             local frente a Playa Brava, despachamos a todo Uruguay.
           </p>
           <div style={{ display: "flex", gap: 12 }}>
@@ -244,7 +249,7 @@ export default async function Home() {
                       letterSpacing: "-0.015em",
                     }}
                   >
-                    {cat.name}
+                    {shortCategoryName(cat.slug, cat.name)}
                   </div>
                 </div>
               </div>

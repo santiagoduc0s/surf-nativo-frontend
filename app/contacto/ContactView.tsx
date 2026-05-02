@@ -4,20 +4,19 @@ import { useState } from "react";
 import Link from "next/link";
 
 const STORE = {
-  address: "Calle 28 esq. Av. Roosevelt, Punta del Este, Maldonado",
-  phone: "+598 4244 1234",
-  phoneHref: "tel:+59842441234",
+  address:
+    "Calle 27 casi 26 - Edificio Ensenada L001a, 20100 Punta del Este, Maldonado",
   whatsapp: "+598 99 123 456",
-  whatsappHref: "https://wa.me/59899123456",
+  whatsappHref:
+    "https://api.whatsapp.com/send?text=https%3A%2F%2Fmaps.app.goo.gl%2F1swdGgntqQGtoKsZ8",
   email: "hola@surfnativo.uy",
-  emailHref: "mailto:hola@surfnativo.uy",
   hoursWeek: "Lun a Vie · 10:00 – 19:30",
   hoursSat: "Sábados · 10:00 – 17:00",
   hoursSun: "Domingos · cerrado (solo temporada)",
   mapsHref:
-    "https://www.google.com/maps/search/?api=1&query=Playa+Brava+Punta+del+Este",
+    "https://www.google.com/maps/search/?api=1&query=Surf+Nativo+Punta+del+Este",
   mapsEmbed:
-    "https://www.google.com/maps?q=Playa+Brava+Punta+del+Este&z=14&output=embed",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.7558724637443!2d-54.941299!3d-34.962727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95750572fccc8687%3A0x552847470c25a73a!2sSurf%20Nativo!5e0!3m2!1sen!2suy!4v1777719482762!5m2!1sen!2suy",
 };
 
 export function ContactView() {
@@ -77,8 +76,8 @@ export function ContactView() {
           marginBottom: 56,
         }}
       >
-        Estamos frente a Playa Brava desde 2008. Te respondemos por WhatsApp en
-        el día. Para envíos a todo Uruguay, mandanos tu CP y te cotizamos.
+        Tienda de surf en Punta del Este. Te respondemos por
+        WhatsApp en el día y enviamos a todo Uruguay.
       </p>
 
       <div
@@ -150,30 +149,6 @@ export function ContactView() {
             Enviar mensaje →
           </button>
 
-          <p
-            style={{
-              fontSize: 12,
-              color: "var(--sn-ink-2)",
-              marginTop: 4,
-              lineHeight: 1.5,
-            }}
-          >
-            Al enviar, abrimos tu cliente de email con el mensaje listo para{" "}
-            <strong style={{ color: "var(--sn-ink)" }}>{STORE.email}</strong>.
-            Si preferís, escribinos directo por{" "}
-            <a
-              href={STORE.whatsappHref}
-              target="_blank"
-              rel="noopener"
-              style={{
-                color: "var(--sn-clay-deep)",
-                borderBottom: "1px solid var(--sn-clay-deep)",
-              }}
-            >
-              WhatsApp
-            </a>
-            .
-          </p>
         </form>
 
         <aside style={{ display: "grid", gap: 16 }}>
@@ -235,32 +210,77 @@ export function ContactView() {
             </a>
           </div>
 
-          <ul
+          <a
+            href={STORE.whatsappHref}
+            target="_blank"
+            rel="noopener"
             style={{
-              listStyle: "none",
-              padding: 0,
-              margin: 0,
-              display: "grid",
-              border: "1px solid var(--sn-line)",
+              display: "flex",
+              alignItems: "center",
+              gap: 16,
+              padding: "18px 22px",
+              background: "#25D366",
+              color: "#fff",
+              border: "1px solid #128C7E",
+              boxShadow: "0 1px 0 rgba(0,0,0,0.04)",
             }}
           >
-            <ContactRow
-              label="WhatsApp"
-              value={STORE.whatsapp}
-              href={STORE.whatsappHref}
-              external
-            />
-            <ContactRow
-              label="Teléfono"
-              value={STORE.phone}
-              href={STORE.phoneHref}
-            />
-            <ContactRow
-              label="Email"
-              value={STORE.email}
-              href={STORE.emailHref}
-            />
-          </ul>
+            <span
+              aria-hidden="true"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 40,
+                height: 40,
+                borderRadius: "50%",
+                background: "#fff",
+                color: "#25D366",
+                flexShrink: 0,
+              }}
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 32 32"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M16.002 3.2C9.045 3.2 3.4 8.844 3.4 15.799c0 2.222.58 4.395 1.682 6.31L3.2 28.8l6.864-1.802a12.595 12.595 0 0 0 5.937 1.508h.005c6.957 0 12.602-5.643 12.602-12.598 0-3.366-1.31-6.532-3.69-8.913a12.51 12.51 0 0 0-8.916-3.795Zm0 23.024h-.004a10.46 10.46 0 0 1-5.33-1.46l-.382-.227-3.973 1.043 1.06-3.873-.249-.397a10.46 10.46 0 0 1-1.602-5.59c.002-5.785 4.71-10.49 10.484-10.49 2.8 0 5.43 1.092 7.41 3.073a10.41 10.41 0 0 1 3.072 7.418c-.002 5.785-4.71 10.503-10.486 10.503Zm5.748-7.852c-.314-.158-1.864-.92-2.153-1.024-.288-.105-.499-.158-.71.158-.21.314-.815 1.025-.999 1.236-.184.21-.368.236-.683.079-.314-.158-1.33-.49-2.534-1.563-.937-.836-1.57-1.868-1.754-2.182-.184-.314-.02-.484.137-.64.141-.14.314-.368.473-.552.157-.184.21-.314.314-.524.105-.21.053-.394-.026-.552-.078-.157-.71-1.71-.971-2.341-.256-.615-.516-.532-.71-.541l-.604-.011a1.16 1.16 0 0 0-.84.394c-.288.314-1.103 1.077-1.103 2.625 0 1.547 1.13 3.043 1.286 3.253.157.21 2.224 3.395 5.388 4.762.753.325 1.34.519 1.798.664.755.24 1.444.207 1.988.126.606-.09 1.864-.762 2.128-1.5.262-.736.262-1.367.184-1.498-.078-.131-.288-.21-.604-.368Z" />
+              </svg>
+            </span>
+            <span
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 2,
+                flex: 1,
+                minWidth: 0,
+              }}
+            >
+              <span
+                className="sn-mono"
+                style={{
+                  fontSize: 11,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  opacity: 0.9,
+                }}
+              >
+                WhatsApp
+              </span>
+              <span
+                style={{
+                  fontSize: 15,
+                  fontWeight: 500,
+                  letterSpacing: "0.01em",
+                }}
+              >
+                {STORE.whatsapp}
+              </span>
+            </span>
+            <span style={{ fontSize: 18, opacity: 0.9 }}>→</span>
+          </a>
 
           <div
             style={{

@@ -4,6 +4,7 @@ import "./globals.css";
 import { CartProvider } from "@/lib/cart";
 import { AuthProvider } from "@/lib/auth";
 import { JsonLd } from "@/components/JsonLd";
+import { ProductChat } from "@/components/ProductChat";
 import {
   SITE_NAME,
   SITE_TAGLINE,
@@ -104,7 +105,10 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
         <AuthProvider>
-          <CartProvider>{children}</CartProvider>
+          <CartProvider>
+            {children}
+            <ProductChat />
+          </CartProvider>
         </AuthProvider>
       </body>
     </html>

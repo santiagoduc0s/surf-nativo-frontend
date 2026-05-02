@@ -60,8 +60,8 @@ export function CartView() {
           >
             Tu carrito está vacío.
           </p>
-          <Link href="/categoria/wetsuits" className="sn-btn">
-            Ver trajes →
+          <Link href="/" className="sn-btn">
+            Volver al inicio →
           </Link>
         </div>
       ) : (

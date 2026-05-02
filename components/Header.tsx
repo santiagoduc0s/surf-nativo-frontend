@@ -13,6 +13,7 @@ const NAV: Array<{ label: string; href: string }> = [
   { label: "Bodyboards", href: "/categoria/bodyboards" },
   { label: "Aletas", href: "/categoria/fins" },
   { label: "Accesorios", href: "/categoria/accesorios" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 export function Header({
@@ -109,8 +110,30 @@ export function Header({
             justifySelf: "end",
           }}
         >
-          <Link href="/buscar" style={{ opacity: 0.85 }}>
-            Buscar
+          <Link
+            href="/buscar"
+            aria-label="Buscar"
+            style={{
+              opacity: 0.85,
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
           </Link>
           <Link href="/cuenta" style={{ opacity: 0.85 }}>
             Cuenta
