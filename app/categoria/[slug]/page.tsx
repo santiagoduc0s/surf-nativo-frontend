@@ -73,33 +73,17 @@ export default async function CategoryPage({
           <span style={{ margin: "0 8px" }}>/</span>
           <span style={{ color: "var(--sn-ink)" }}>{cat.name}</span>
         </div>
-        <div
-          className="sn-row sn-row-cat-head"
-          style={{ alignItems: "flex-end" }}
+        <h1
+          style={{
+            fontSize: "clamp(36px, 6vw, 64px)",
+            lineHeight: 1.05,
+            fontWeight: 600,
+            letterSpacing: "-0.02em",
+          }}
         >
-          <h1
-            style={{
-              fontSize: "clamp(36px, 6vw, 64px)",
-              lineHeight: 1.05,
-              fontWeight: 600,
-              letterSpacing: "-0.02em",
-            }}
-          >
-            {firstWord}{" "}
-            <span style={{ color: "var(--sn-clay)" }}>{rest.join(" ")}</span>
-          </h1>
-          <p
-            style={{
-              fontSize: 16,
-              lineHeight: 1.55,
-              color: "var(--sn-ink-2)",
-              paddingBottom: 12,
-            }}
-          >
-            Importados de marcas líderes, probados y elegidos por nuestro equipo en aguas
-            uruguayas. Stock real al día de hoy.
-          </p>
-        </div>
+          {firstWord}{" "}
+          <span style={{ color: "var(--sn-clay)" }}>{rest.join(" ")}</span>
+        </h1>
       </section>
 
       <hr
