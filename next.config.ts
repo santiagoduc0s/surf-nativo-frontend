@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Docker: .next/standalone trae server.js + solo los node_modules que usa
+  // el servidor (ver Dockerfile).
+  output: "standalone",
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "http2.mlstatic.com" },
